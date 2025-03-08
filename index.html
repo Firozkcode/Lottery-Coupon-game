@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lottery Coupon Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Burger Icon -->
+    <div class="burger">&#9776;</div>
+
+    <!-- Hidden Menu -->
+    <div class="menu">
+        <label for="numCards">Number of Cards:</label>
+        <input type="number" id="numCards" min="1" max="50" value="10">
+
+        <label for="minPrize">Min Prize:</label>
+        <input type="number" id="minPrize" min="1" value="10">
+
+        <label for="maxPrize">Max Prize:</label>
+        <input type="number" id="maxPrize" min="1" value="100">
+
+        <button id="startGame">Start Game</button>
+    </div>
+
+    <h1>Tap any Card to Win Prize!</h1>
+
+    <div class="wrap">
+        <div class="game"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
