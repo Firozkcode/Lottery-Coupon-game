@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>🎉You Won!!🎉</p>
                 <h1>Rs.${getRandomPrize(minPrize, maxPrize)}</h1>
                 <p>🎉Congratulations!!🎉</p>
-                <a href="#" class="play-again">Play Again</a>
+                <a href="index.html" class="play-again">Play Again</a>
             `;
 
             inside.appendChild(front);
@@ -70,8 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     const playAgainBtn = card.querySelector(".play-again");
                     playAgainBtn.style.display = "block";
 
-                    playAgainBtn.addEventListener("click", function (e) {
-                        e.preventDefault();
+                    // playAgainBtn.addEventListener("click", function (e) {
+                    playAgainBtn.addEventListener("click",  () =>  {
+                        // e.preventDefault();
                         generateCards(numCards, minPrize, maxPrize);
                     });
                 }
@@ -99,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         generateCards(numCards, minPrize, maxPrize);
+        menu.classList.toggle("active");
     });
 
     generateCards(10, 10, 100);
